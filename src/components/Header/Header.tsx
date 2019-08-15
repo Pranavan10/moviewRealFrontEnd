@@ -39,10 +39,10 @@ export default class Header extends React.Component<IProps,[]> {
     return (
         <div className="container-fluid" style={{backgroundImage: 'linear-gradient(to right, #000000, #555555)'}}>
             <Row>
-            <Col  sm={6} style={{minHeight:'100px'}}>
+            <Col  sm={9} style={{minHeight:'100px'}}>
             <span className='headerText'><img src={MoView} alt="Paris Itinerary" style={{width:150,  marginLeft:10}}/> <img src={logo} alt="Paris Itinerary" style={{width:113, marginLeft:10}}/></span>
             </Col>
-            <Col sm={6} style={{minHeight:'100px'}}>
+            <Col sm={3} style={{minHeight:'100px'}}>
             <Row>
             <Button onClick = {() => this.props.setPage("Home")}  style= {{color:'white', position:'absolute',right:10, top:10}} >Home</Button>
             </Row>
