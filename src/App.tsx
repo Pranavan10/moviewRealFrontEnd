@@ -153,18 +153,20 @@ public performSearch = (searchTerm:any) => {
 public responseFacebook = (response: any) =>{
   if(response.error !== isNullOrUndefined) {
     
-      this.setState({
-        isLoggedIn:true,
-        name: response.name,
-        picture: response.picture === undefined ? "" : response.picture.data.url,
-        userID:response.userID,
+      if(response.status !=="unknown"){
+        this.setState({
+          isLoggedIn:true,
+          name: response.name,
+          picture: response.picture === undefined ? "" : response.picture.data.url,
+          userID:response.userID,
+          
+          
+          
+        })
         
-        
-        
-      })
-      
-      this.nDisable()
-      this.addUser()
+        this.nDisable()
+        this.addUser()
+    }
     
   }
 }
