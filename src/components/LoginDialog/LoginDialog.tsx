@@ -22,7 +22,7 @@ interface IProps{
     picture:string
     responseFacebook:(response:any) => void
     componentClicked:() => void
-    addUser:() => void
+    
 }
 
 
@@ -78,7 +78,7 @@ export default class LoginDialog extends React.Component<IProps,[]> {
 
                 <DialogActions>
                   <Button 
-                    onClick= {() => { this.props.setOpen(false);this.props.addUser()}}  color="primary">
+                    onClick= {() => { this.props.setOpen(false)}}  color="primary">
                     Close
                   </Button>
                 </DialogActions>

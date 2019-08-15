@@ -93,7 +93,7 @@ public addUser = () =>{
     return result.json();
 
 }).then((result:any) =>{
-  console.log(result)
+  
     this.setState({
       userKey:result.userKey
     })
@@ -168,7 +168,7 @@ public responseFacebook = (response: any) =>{
     
   }
 }
-public componentClicked = () => console.log("dd")
+public componentClicked = () => console.log("")
 
 
   public findReview = () =>{
@@ -185,7 +185,7 @@ public componentClicked = () => console.log("dd")
   }
   
   public setDialog = (nextOpen:boolean) => {
-    console.log("Current state: ", this.state.open, "Proposed State; ", nextOpen)
+    
     if(nextOpen !==this.state.open){
       this.setState({
         open:nextOpen
@@ -218,7 +218,7 @@ public componentClicked = () => console.log("dd")
    } 
     return (
       <React.Fragment>
-        <LoginDialog open={this.state.open} setOpen={this.setDialog} name={this.state.name} isLoggedIn= {this.state.isLoggedIn} userID={this.state.userID} picture = {this.state.picture} responseFacebook={this.responseFacebook} componentClicked={this.componentClicked} addUser={this.addUser} />
+        <LoginDialog open={this.state.open} setOpen={this.setDialog} name={this.state.name} isLoggedIn= {this.state.isLoggedIn} userID={this.state.userID} picture = {this.state.picture} responseFacebook={this.responseFacebook} componentClicked={this.componentClicked}  />
         <Header setPage={this.setPage} setDialog = {this.setDialog} isLoggedIn={this.state.isLoggedIn}  />
         {curPage}
       </React.Fragment>

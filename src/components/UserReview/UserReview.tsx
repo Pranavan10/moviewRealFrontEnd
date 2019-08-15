@@ -62,7 +62,7 @@ export default class UserReview extends Component<IProps, IState> {
         })
     }
     public setDialog = (nextOpen:boolean) => {
-        console.log("Current state: ", this.state.open, "Proposed State; ", nextOpen)
+        
         if(nextOpen !==this.state.open){
           this.setState({
             open:nextOpen
@@ -75,7 +75,7 @@ export default class UserReview extends Component<IProps, IState> {
             
             
             this.state.reviewsFromDb.map((reviews: any, i: number) => {
-                console.log(this.state.reviewsFromDb)
+                
                 return (
                     
                     <React.Fragment key={i} >

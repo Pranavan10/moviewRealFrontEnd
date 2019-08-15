@@ -42,7 +42,7 @@ export default class EditDialog extends React.Component<IProps,IState> {
     }
 
     public componentDidMount() {
-        console.log("hasdasi");
+        
         this.getMovie();
     }
     
@@ -57,8 +57,8 @@ export default class EditDialog extends React.Component<IProps,IState> {
     }   
     public updateMovie = () => {
         const urlString = "https://moviewdevops.azurewebsites.net/api/Reviews/" +  this.props.reviewId;
-        const formReview = document.getElementById("reviewEditText") as HTMLInputElement;
-        console.log(formReview)
+        
+        
         fetch(urlString, {
             method: 'PUT',
             headers:{
@@ -83,7 +83,7 @@ export default class EditDialog extends React.Component<IProps,IState> {
         }).then((result: any) => {
             return result.json();
         }).then((result: any) => {
-            console.log("hi", result)
+            
             this.setState({
                 value: result.rating,
                 review: result.review,

@@ -59,7 +59,7 @@ export default class ReviewForm extends React.Component<IProps,IState> {
     
     
      public  addReview = async () => {
-       console.log(this.state.movieInput)
+       
        const formReview = document.getElementById("reviewText") as HTMLInputElement;
 
        await fetch('https://moviewdevops.azurewebsites.net/api/Movies',{
@@ -160,7 +160,7 @@ export default class ReviewForm extends React.Component<IProps,IState> {
                             isLoading = {true}
                             loadOptions = {this.props.loadOptions}
                             onChange = {(newValue: any) =>{
-                                console.log(newValue)
+                                
                                 this.setState({movieInput:newValue.value})
                             } }
                             />
