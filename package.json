@@ -1,0 +1,33 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.2.1",
+    "@material-ui/lab": "^4.0.0-alpha.22",
+    "@types/jquery": "^3.3.31",
+    "@types/react-facebook-login": "^4.1.0",
+    "@types/react-select": "^3.0.2",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.9",
+    "react-dom": "^16.8.6",
+    "react-facebook-login": "^4.1.1",
+    "react-scripts-ts": "3.1.0",
+    "react-select": "^3.0.4"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.6.8",
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.5",
+    "typescript": "^3.5.3"
+  }
+}
