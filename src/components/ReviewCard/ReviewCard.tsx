@@ -34,7 +34,7 @@ class ReviewCard extends React.Component<IProps, {}> {
                         <Rating value={this.props.rating} readOnly={true} />
                         
                     </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
+                    <Typography variant="body2" color="textPrimary" component="p">
                         {this.props.review}
                     </Typography>
 
