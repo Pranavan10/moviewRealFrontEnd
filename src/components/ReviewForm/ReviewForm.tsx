@@ -17,7 +17,7 @@ import './ReviewForm.css';
 interface IState{
     movieInput:string
     movieId:number,
-    
+    submitted:string,
 }
 
 
@@ -34,6 +34,7 @@ interface IProps{
     userKey:number;
     disable:boolean
     
+    
 }
 
 
@@ -45,6 +46,7 @@ export default class ReviewForm extends React.Component<IProps,IState> {
         this.state = {
             movieInput:"",
             movieId:0,
+            submitted:"Submit"
             
             
             
@@ -57,7 +59,7 @@ export default class ReviewForm extends React.Component<IProps,IState> {
 
     
     
-    
+     
      public  addReview = async () => {
        
        const formReview = document.getElementById("reviewText") as HTMLInputElement;
@@ -106,7 +108,7 @@ export default class ReviewForm extends React.Component<IProps,IState> {
     }
     
     public render(){
-    
+        
     
     return (
         <div className="textbox">
@@ -188,8 +190,9 @@ export default class ReviewForm extends React.Component<IProps,IState> {
                     </Row>
                     <Row>
                         <Col>
-                            <Button disabled={this.props.disable}  onClick= {() => {this.addReview()}} variant="contained" color="primary" style={{ outline:'none', width:'100%', marginLeft:'10px' , marginTop:'10px'   }} size="small"    >
-                            Submit
+                            
+                            <Button disabled={this.props.disable}  onClick= {() => {this.addReview() ;this.setState({submitted:"Submitted"})}  } variant="contained" color="primary" style={{ outline:'none', width:'100%', marginLeft:'10px' , marginTop:'10px'   }} size="small"    >
+                            {this.state.submitted}
                             </Button>
                         </Col>
                         

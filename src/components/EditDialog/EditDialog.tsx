@@ -97,7 +97,7 @@ export default class EditDialog extends React.Component<IProps,IState> {
         
         return (
             <React.Fragment>
-            <Button size="small" href="https://www.facebook.com/sharer/sharer.php?u=https://moviewdevops.azurewebsites.net/index.html" variant="contained" color="primary" >
+            <Button size="small" href="https://www.facebook.com/sharer/sharer.php?u=https://moview.azurewebsites.net/" variant="contained" color="primary" >
                 
                 Share on Facebook
                 
